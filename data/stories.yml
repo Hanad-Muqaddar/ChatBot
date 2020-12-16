@@ -1,0 +1,191 @@
+version: "2.0"
+stories:
+- story: largest size
+  steps:
+  - intent: largest_size
+  - action: utter_largest_size
+- story: slab installation
+  steps:
+  - intent: slab_install
+  - action: utter_slab_installation
+- story: stone
+  steps:
+  - intent: stone_product
+  - action: utter_stone_product
+- story: stone_size_slab
+  steps:
+  - intent: largest_size+slab_install+stone_product
+  - action: utter_stone_slab_size
+- story: happy path
+  steps:
+  - intent: greet
+  - action: action_hello_world
+  - intent: mood_great
+  - action: utter_happy
+- story: hello_world
+  steps:
+  - intent: hello_world
+  - action: action_hello_world
+- story: location data
+  steps:
+  - intent: location
+  - action: action_location_response
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: action_hello_world
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: action_hello_world
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+- story: marble path
+  steps:
+  - intent: greet
+  - action: action_hello_world
+  - intent: cost
+  - action: utter_cost
+  - intent: delivery-time
+  - action: utter_delivery-time
+- story: marble path 2
+  steps:
+  - intent: greet
+  - action: action_hello_world
+  - intent: cost+delivery-time
+  - action: utter_cost_delivery-time
+  - action: utter_ask_location
+  - intent: location
+  - action: action_location_response
+- story: marble path 3
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: cost+delivery-time
+  - action: utter_cost_delivery-time
+  - action: utter_ask_location
+  - intent: location
+  - action: action_location_response
+- story: Story from Conversation ID 5043dfe54c714f439865f3ac2a87d316
+  steps:
+  - intent: greet
+  - action: action_hello_world
+  - intent: cost+delivery-time
+  - action: utter_cost_delivery-time
+  - action: utter_ask_location
+  - intent: location
+    entities:
+    - location: karachi
+  - action: action_location_response
+  - intent: deny
+  - action: utter_happy
+- story: Story from Conversation ID 96cd48539a5249e588a9a0b1358f23fd
+  steps:
+  - action: action_hello_world
+  - intent: greet
+  - action: utter_cost
+  - intent: mood_great
+  - action: utter_happy
+- story: Story from Conversation ID 5a818b1746424f5eb870f3d5d16b05fa
+  steps:
+  - action: action_hello_world
+  - intent: greet
+  - action: utter_cost
+  - intent: delivery-time
+  - action: utter_cost_delivery-time
+  - action: utter_ask_location
+  - intent: location
+    entities:
+    - location: islamabad
+  - action: action_location_response
+  - intent: mood_great
+  - action: utter_happy
+- story: Story from Conversation ID 3df90ade764449d0b545727cdc6636b5
+  steps:
+  - intent: cost+delivery-time
+    entities:
+    - location: islamabad
+  - action: utter_goodbye
+- story: Story from Conversation ID e05767c0b6d9480e97ef7ddf21ccc198
+  steps:
+  - action: action_hello_world
+  - intent: greet
+  - action: utter_largest_size
+- story: Story from Conversation ID 689bb2250a8d495a8e52325091ac32dc
+  steps:
+  - action: utter_stone_slab_size
+  - intent: largest_size+slab_install+stone_product
+  - intent: slab_install
+  - action: utter_stone_product
+  - intent: largest_size+slab_install+stone_product
+  - action: utter_stone_slab_size
+- story: Story from Conversation ID 90856ed0446c4d37b07f7fb300158cce
+  steps:
+  - intent: largest_size
+  - action: utter_largest_size
+- story: Story from Conversation ID bf4c02c45fab45cd9f646264de409157
+  steps:
+  - action: utter_largest_size
+  - intent: largest_size
+  - intent: largest_size
+  - action: utter_largest_size
+- story: Story from Conversation ID 118ace8a608c4ed898b1d4a7e57c8174
+  steps:
+  - intent: largest_size
+  - action: utter_largest_size
+- story: size story
+  steps:
+  - intent: size
+  - action: action_size_response
+- story: size story 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: size
+  - action: action_size_response
+- story: Story from Conversation ID f8b5f21c4b974f2681126229c33232b4
+  steps:
+  - action: action_hello_world
+  - intent: greet
+  - action: utter_cost_delivery-time
+  - action: utter_ask_location
+  - intent: location
+    entities:
+    - location: islamabad
+  - action: action_location_response
+  - intent: size
+    entities:
+    - size: '11'
+    - size: '12'
+  - action: action_size_response
+  - intent: deny
+  - action: utter_happy
+- story: Story from Conversation ID b840075271cd46f8ab29e8b1a55d9826
+  steps:
+  - action: action_hello_world
+  - intent: greet
+  - action: utter_largest_size
+  - intent: nlu_fallback
+  - action: action_size_response
+- story: Story from Conversation ID 3c4826c9293143308bbd36d0b9672c45
+  steps:
+  - intent: greet
+  - action: action_hello_world
+  - intent: size
+    entities:
+    - size: '11'
+    - size: '11'
+  - action: action_size_response
+  - intent: size
+    entities:
+    - size: '12'
+    - size: '12'
+  - action: action_size_response

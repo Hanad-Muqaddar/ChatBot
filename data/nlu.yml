@@ -1,0 +1,156 @@
+version: "2.0"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - salam
+- intent: hello_world
+  examples: |
+    - hello
+    - hello world
+    - world
+- intent: cost
+  examples: |
+    - what is the cost per square foot?
+    - what is the cost?
+    - cost per square feet
+    - cost
+- intent: delivery-time
+  examples: |
+    - what is the delivery time?
+    - delivery time
+    - how long is the delivery time?
+- intent: cost+delivery-time
+  examples: |
+    - what is the cost per square feet and how long is the delivery?
+    - cost per square feet and delivery time
+    - cost and delivery time
+- intent: location
+  examples: |
+    - [islamabad](location)
+    - [Rawalpindi](location)
+    - [karachi](location)
+- intent: size
+  examples: |
+    - size is [11*11](size)
+    - size is [11 by 11](size)
+    - [11/11](size)
+    - what is the cost of size is [11*11](size)?
+    - what is the cost of size is [11/11](size)?
+    - what is the cost of size is [11 by 11](size)?
+    - size [11*11](size)
+    - [11 by 11](size)
+    - [11*11](size)
+
+- intent: largest_size
+  examples: |
+    - what is the largest size tile for floors?
+    - largest size of tile
+    - biggest size of tile
+    - tile for floor
+    - what is the biggest size tile for floors
+    - what is the largest tile size for floor?
+    - what is the largest size of tile for floor?
+    - what is the biggest size of tiles for floor?
+- intent: slab_install
+  examples: |
+    - can slab be installed on floors?
+    - slab for floor
+    - slab insatllation on floor
+    - can we installed slab on floor?
+- intent: stone_product
+  examples: |
+    - would you please provide suggestions for stone?
+    - can you please tell me about stone product?
+    - i want to know the stone largest format along with sizes.
+    - can you please provide stone largest sizes?
+    - i want suggestion about stone along with sizes.
+
+- intent: largest_size+slab_install+stone_product
+  examples: |
+    - what is the largest size tile for floors? can slab be installed on floors? would you please provide suggestions for stone?
+    - largest size of tile, slab for floor, can you please tell me about stone product?
+    - biggest size of tile, slab insatllation on floor, i want to know the stone largest format along with sizes.
+    - tile for floor, can we installed slab on floor? can you please provide stone largest sizes?
+    - what is the biggest size tile for floors? i want suggestion about stone along with sizes. slab insatllation on floor.
+
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+- intent: affirm
+  examples: |
+    - yes
+    - yes, thats sounds good
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
