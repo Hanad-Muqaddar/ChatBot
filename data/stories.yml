@@ -189,3 +189,7 @@ stories:
     - size: '12'
     - size: '12'
   - action: action_size_response
+- story: Story from Conversation ID 800615d9f48642ed8f6f100366c2732d
+  steps:
+  - intent: greet
+  - action: action_hello_world
