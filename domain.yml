@@ -24,7 +24,7 @@ entities:
 - size
 responses:
   utter_greet:
-  - text: Hey! How are you? How can i help you?
+  - text: Hey,How are you? Welcome to Marble store. How may i help you?
   utter_cheer_up:
   - image: https://i.imgur.com/nGF1K8f.jpg
     text: 'Here is something to cheer you up:'

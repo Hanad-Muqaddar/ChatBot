@@ -19,13 +19,13 @@ stories:
 - story: happy path
   steps:
   - intent: greet
-  - action: action_hello_world
+  - action: utter_greet
   - intent: mood_great
   - action: utter_happy
 - story: hello_world
   steps:
   - intent: hello_world
-  - action: action_hello_world
+  - action: utter_greet
 - story: location data
   steps:
   - intent: location
@@ -33,7 +33,7 @@ stories:
 - story: sad path 1
   steps:
   - intent: greet
-  - action: action_hello_world
+  - action: utter_greet
   - intent: mood_unhappy
   - action: utter_cheer_up
   - action: utter_did_that_help
@@ -42,7 +42,7 @@ stories:
 - story: sad path 2
   steps:
   - intent: greet
-  - action: action_hello_world
+  - action: utter_greet
   - intent: mood_unhappy
   - action: utter_cheer_up
   - action: utter_did_that_help
@@ -51,7 +51,7 @@ stories:
 - story: marble path
   steps:
   - intent: greet
-  - action: action_hello_world
+  - action: utter_greet
   - intent: cost
   - action: utter_cost
   - intent: delivery-time
@@ -59,7 +59,7 @@ stories:
 - story: marble path 2
   steps:
   - intent: greet
-  - action: action_hello_world
+  - action: utter_greet
   - intent: cost+delivery-time
   - action: utter_cost_delivery-time
   - action: utter_ask_location
@@ -77,7 +77,7 @@ stories:
 - story: Story from Conversation ID 5043dfe54c714f439865f3ac2a87d316
   steps:
   - intent: greet
-  - action: action_hello_world
+  - action: utter_greet
   - intent: cost+delivery-time
   - action: utter_cost_delivery-time
   - action: utter_ask_location
@@ -89,14 +89,14 @@ stories:
   - action: utter_happy
 - story: Story from Conversation ID 96cd48539a5249e588a9a0b1358f23fd
   steps:
-  - action: action_hello_world
+  - action: utter_greet
   - intent: greet
   - action: utter_cost
   - intent: mood_great
   - action: utter_happy
 - story: Story from Conversation ID 5a818b1746424f5eb870f3d5d16b05fa
   steps:
-  - action: action_hello_world
+  - action: utter_greet
   - intent: greet
   - action: utter_cost
   - intent: delivery-time
@@ -116,7 +116,7 @@ stories:
   - action: utter_goodbye
 - story: Story from Conversation ID e05767c0b6d9480e97ef7ddf21ccc198
   steps:
-  - action: action_hello_world
+  - action: utter_greet
   - intent: greet
   - action: utter_largest_size
 - story: Story from Conversation ID 689bb2250a8d495a8e52325091ac32dc
@@ -153,7 +153,7 @@ stories:
   - action: action_size_response
 - story: Story from Conversation ID f8b5f21c4b974f2681126229c33232b4
   steps:
-  - action: action_hello_world
+  - action: utter_greet
   - intent: greet
   - action: utter_cost_delivery-time
   - action: utter_ask_location
@@ -170,7 +170,7 @@ stories:
   - action: utter_happy
 - story: Story from Conversation ID b840075271cd46f8ab29e8b1a55d9826
   steps:
-  - action: action_hello_world
+  - action: utter_greet
   - intent: greet
   - action: utter_largest_size
   - intent: nlu_fallback
@@ -178,7 +178,7 @@ stories:
 - story: Story from Conversation ID 3c4826c9293143308bbd36d0b9672c45
   steps:
   - intent: greet
-  - action: action_hello_world
+  - action: utter_greet
   - intent: size
     entities:
     - size: '11'
