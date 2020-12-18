@@ -11,21 +11,7 @@ from typing import Any, Text, Dict, List
 #
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
-#
-#
-class ActionHelloWorld(Action):
 
-    def name(self) -> Text:
-        return "action_hello_world"
-
-    async def run(self, dispatcher: CollectingDispatcher,
-            tracker: Tracker,
-            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-
-        dispatcher.utter_message(text="Hey,How are you? Welcome to Marble store. ")
-        # dispatcher.utter_message(image = "https://thumbs.dreamstime.com/b/stone-marble-background-abstract-marbel-design-wall-floor-beautiful-grey-curly-golden-veins-161430363.jpg")
-
-        return []
 
 class ActionLocationResponse(Action):
 
@@ -40,13 +26,20 @@ class ActionLocationResponse(Action):
         print(len(entities))
         for e in entities:
             if e['entity'] == 'location':
-                name = e['value']
-            if name == 'karachi':
-                message = "order will be deliverd in 5 days"
-            if name == 'islamabad':
+                n = e['value']
+                name = n.lower()
+            if name == 'atlanta':
+                message = "order will be deliverd in 2 days"
+            if name == 'brossard':
                 message = "order will be delivered in 24 hours"
-            if name == 'rawalpindi':
+            if name == 'toronto':
+                message = "order will be delivered in 3 days."
+            if name == 'detroit':
                 message = "order will be delivered in 24 hours."
+            if name == 'montreal':
+                message = "order will be delivered in 4 days.."
+            else:
+                message = "In this Location we cannot operate."
 
         dispatcher.utter_message(text=f"in {name} {message}")
         return []

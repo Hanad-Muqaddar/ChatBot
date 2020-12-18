@@ -53,14 +53,14 @@ responses:
   - text: Yes we can install slab on floor. The largest size of slab is 5/5.
   utter_stone_product:
   - image: https://www.ftmmachinery.com/uploads/image/20190419002343_84718.jpg
-    text: These are the products avilabel right now.
+    text: These are the products available right now.
   utter_stone_slab_size:
   - image: https://www.ftmmachinery.com/uploads/image/20190419002343_84718.jpg
-    text: These are the products avilabel right now. And Yes we can install slab on
-      floor. The largest size of the tile id 4/4.
+    text: These are the products available right now. And Yes we can install slab on
+      floor. The largest size of the tile is 4 / 4.
   - image: https://pic.stonecontact.com/picture/20149/5441/sell-stone-product-p915-1b.jpg
     text: Yes we can install slab on floor and the largest size of slab is 5/5. The
-      largest size of the tile id 4/4. These are the products avilabel right now in
+      largest size of the tile is 4 / 4. These are the products available right now in
       our stock.
 actions:
 - action_hello_world

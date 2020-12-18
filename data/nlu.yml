@@ -39,9 +39,12 @@ nlu:
     - cost and delivery time
 - intent: location
   examples: |
-    - [islamabad](location)
-    - [Rawalpindi](location)
-    - [karachi](location)
+    - [Atlanta](location)
+    - [Brossard](location)
+    - [DETROIT](location)
+    - [Montreal](location)
+    - [Toronto](location)
+
 - intent: size
   examples: |
     - size is [11*11](size)
