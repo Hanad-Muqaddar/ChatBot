@@ -61,5 +61,5 @@ class ActionsizeResponse(Action):
         b = int(values[1])
         total_size = a * b
         total_cost = total_size * 7
-        dispatcher.utter_message(text=f"Total size of floor is {total_size}, and cost is {total_cost}$")
+        dispatcher.utter_message(text=f"Total floor size is {total_size} square feet, and cost is ${total_cost}")
         return []

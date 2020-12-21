@@ -1,8 +1,15 @@
+version: '2.0'
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
+- cost+delivery-time
+- size
+- stone_product
+- stop
 - greet
+- slab_install
+- location
 - goodbye
 - affirm
 - deny
@@ -11,13 +18,8 @@ intents:
 - bot_challenge
 - cost
 - delivery-time
-- cost+delivery-time
-- location
 - hello_world
-- size
 - largest_size
-- slab_install
-- stone_product
 - largest_size+slab_install+stone_product
 entities:
 - location
@@ -26,8 +28,7 @@ responses:
   utter_greet:
   - text: Hey,How are you? Welcome to Marble store. How may i help you?
   utter_cheer_up:
-  - image: https://i.imgur.com/nGF1K8f.jpg
-    text: 'Here is something to cheer you up:'
+  - text: 'Here is something to cheer you up:'
   utter_did_that_help:
   - text: Did that help you?
   utter_happy:
@@ -40,11 +41,9 @@ responses:
   - image: https://thumbs.dreamstime.com/b/stone-marble-background-abstract-marbel-design-wall-floor-beautiful-grey-curly-golden-veins-161430363.jpg
     text: The cost of marble is 20$ per square feet.
   utter_delivery-time:
-  - text: Delivery time is depends upon your location, but normally the delivery time
-      is 2 days.
+  - text: Delivery time is depends upon your location, but normally the delivery time is 2 days.
   utter_cost_delivery-time:
-  - text: The cost of marble is $20 per square feet and delivery time depends upon
-      your location.
+  - text: The cost of marble is $20 per square feet and delivery time depends upon your location.
   utter_ask_location:
   - text: What is your location?
   utter_largest_size:
@@ -56,13 +55,15 @@ responses:
     text: These are the products available right now.
   utter_stone_slab_size:
   - image: https://www.ftmmachinery.com/uploads/image/20190419002343_84718.jpg
-    text: These are the products available right now. And Yes we can install slab on
-      floor. The largest size of the tile is 4 / 4.
+    text: These are the products available right now. And Yes we can install slab on floor. The largest size of the tile is 4 / 4.
   - image: https://pic.stonecontact.com/picture/20149/5441/sell-stone-product-p915-1b.jpg
-    text: Yes we can install slab on floor and the largest size of slab is 5/5. The
-      largest size of the tile is 4 / 4. These are the products available right now in
-      our stock.
+    text: Yes we can install slab on floor and the largest size of slab is 5/5. The largest size of the tile is 4 / 4. These are the products available right now in our stock.
 actions:
 - action_hello_world
 - action_location_response
 - action_size_response
+- utter_ask_location
+- utter_cost_delivery-time
+- utter_greet
+- utter_slab_installation
+- utter_stone_product

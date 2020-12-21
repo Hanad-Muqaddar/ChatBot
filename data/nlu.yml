@@ -37,6 +37,7 @@ nlu:
     - what is the cost per square feet and how long is the delivery?
     - cost per square feet and delivery time
     - cost and delivery time
+    - I am interested in marble cost and delivery
 - intent: location
   examples: |
     - [Atlanta](location)
@@ -44,7 +45,7 @@ nlu:
     - [DETROIT](location)
     - [Montreal](location)
     - [Toronto](location)
-
+    - [toronto](location)
 - intent: size
   examples: |
     - size is [11*11](size)
@@ -56,7 +57,7 @@ nlu:
     - size [11*11](size)
     - [11 by 11](size)
     - [11*11](size)
-
+    - What is the cost of marble of size [11](size) x [15](size)?
 - intent: largest_size
   examples: |
     - what is the largest size tile for floors?
@@ -73,6 +74,7 @@ nlu:
     - slab for floor
     - slab insatllation on floor
     - can we installed slab on floor?
+    - can we install slab?
 - intent: stone_product
   examples: |
     - would you please provide suggestions for stone?
@@ -80,7 +82,7 @@ nlu:
     - i want to know the stone largest format along with sizes.
     - can you please provide stone largest sizes?
     - i want suggestion about stone along with sizes.
-
+    - any suggestion for stone
 - intent: largest_size+slab_install+stone_product
   examples: |
     - what is the largest size tile for floors? can slab be installed on floors? would you please provide suggestions for stone?
@@ -88,7 +90,6 @@ nlu:
     - biggest size of tile, slab insatllation on floor, i want to know the stone largest format along with sizes.
     - tile for floor, can we installed slab on floor? can you please provide stone largest sizes?
     - what is the biggest size tile for floors? i want suggestion about stone along with sizes. slab insatllation on floor.
-
 - intent: goodbye
   examples: |
     - good afternoon
